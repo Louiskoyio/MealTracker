@@ -1,0 +1,11 @@
+<app-meal-form></app-meal-form>
+<div class="row">
+    <div class="col-md-6">
+      <div *ngFor='let meal of meals;let i = index' (isComplete) = 'deleteQuote($event,i)'>
+        <div>
+          <h6 id={{i}}>{{meal.food}} for lunch Calories:{{meal.calories}}</h6>
+          <button (click)='toggleDetails(i)' class="btn btn-primary">Edit Details</button>
+        </div>
+        </div>
+      </div>
+    </div>
